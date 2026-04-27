@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Image Styling Practice</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 左圖：圓角 + 不變形 */
+    .img-left {
+      width: 33%;
+      height: 300px;
+      object-fit: cover; /* 不變形 */
+      border-radius: 18px;
+    }
+
+    /* 中間圓形圖片 */
+    .img-center {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ccc;
+    }
+
+    /* 右圖：故意變形 */
+    .img-right {
+      width: 33%;
+      height: 300px;
+      /* 沒有 object-fit → 會變形 */
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- 左邊圖片（圓角 + 不變形） -->
+    <img
+      class="img-left"
+      src="https://picsum.photos/id/1015/600/400"
+      alt="left"
+    />
+
+    <!-- 中間圓形 -->
+    <img
+      class="img-center"
+      src="https://picsum.photos/id/1016/600/400"
+      alt="center"
+    />
+
+    <!-- 右邊圖片（變形） -->
+    <img
+      class="img-right"
+      src="https://picsum.photos/id/1015/600/400"
+      alt="right"
+    />
+
+  </div>
+
+</body>
+</html>
